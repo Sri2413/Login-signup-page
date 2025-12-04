@@ -16,6 +16,8 @@ mongoose
 
 app.use("/api/user", userRoutes); // FIXED ROUTE
 
-app.listen(5000, () => {
-  console.log("Server is running on port 5000");
+// Use the port assigned by Render, fallback to 5000 for local
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

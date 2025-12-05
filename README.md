@@ -1,71 +1,126 @@
-# Getting Started with Create React App
+# Authentication System (MERN Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A complete authentication system built using the **MERN stack**, supporting:
 
-## Available Scripts
+- User Signup
+- Password Hashing with **bcryptjs**
+- User Login
+- JWT Token Generation & Authentication
+- Secure API Endpoints
+- Fully responsive UI with React
+- Backend hosted on **Render**
+- Frontend hosted on **Vercel**
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Frontend:** [https://login-signup-page-pi-lake.vercel.app/]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Backend API:** [https://backend-5rvt.onrender.com]
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Features
 
-### `npm run build`
+- Signup with hashed passwords
+- Login with JWT token generation
+- Secure authentication flow
+- LocalStorage token storage
+- API requests handled with Axios
+- MongoDB database
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧑‍💻 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **Frontend:**
 
-### `npm run eject`
+- React JS
+- Axios
+- CSS
+- React Router
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **Backend:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- bcryptjs (Password Hashing)
+- jsonwebtoken (JWT Token)
+- CORS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📦 API Endpoints
 
-## Learn More
+### **POST /api/user/signup**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Registers a new user.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **POST /api/user/login**
 
-### Code Splitting
+Authenticates user and returns JWT token.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## ⚙️ Installation Guide
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **Backend Setup**
 
-### Making a Progressive Web App
+```bash
+cd backend
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **Frontend Setup**
 
-### Advanced Configuration
+```bash
+cd frontend
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📂 Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+/authentication
+   /frontend
+   /backend
+      server.js
+      /routes
+      /models
+      /config.js
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# Login-signup-page" 
+## 🔐 Environment Variables
+
+Configure the following in your `.env` files:
+
+### Backend `.env`
+
+```
+MONGO_URL=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+
+```
+
+### Frontend `.env`
+
+```
+REACT_APP_API_URL=https://your-backend.onrender.com
+```
+
+---
+
+## 📝 Author
+
+**Srikanth B**
+
+GitHub: [https://github.com/Sri2413](https://github.com/Sri2413)

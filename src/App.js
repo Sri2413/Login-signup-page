@@ -12,3 +12,6 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+//Tge baove mentioned concepts are client-side routing ASP it does need o refrres the page
+//But whenever the API call are happedn it comes under the server side routing

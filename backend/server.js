@@ -11,7 +11,11 @@ app.use(express.json());
 
 mongoose
   .connect(MONGO_URL)
-  .then(() => console.log("MongoDB connected successfully"))
+  .then(() =>
+    console.log(
+      "MongoDB connected successfully,Let rock it baby..............."
+    )
+  )
   .catch((err) => console.log("DB ERROR:", err));
 
 app.use("/api/user", userRoutes); // FIXED ROUTE

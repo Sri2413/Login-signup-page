@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import "./Login.css";
 
 export default function Login() {
@@ -20,20 +21,21 @@ export default function Login() {
         }
       );
 
-      alert(response.data.message);
+      toast.success(response.data.message);
       localStorage.setItem("Token", response.data.token);
     } catch (error) {
       console.log(error);
       if (error.response && error.response.data) {
-        alert(error.response.data.error);
+        toast.error(error.response.data.error);
       } else {
-        alert("Server error");
+        toast.error("Server error");
       }
     }
   }
 
   return (
     <div className="login-container">
+      <ToastContainer position="top-center" />
       <form className="login-box" onSubmit={handle}>
         <h2>Login</h2>
 
@@ -58,7 +60,6 @@ export default function Login() {
         <button className="login-btn" type="submit">
           LOGIN
         </button>
-
         <p className="small-text">
           Don't have an account? <Link to="/signup">Create one</Link>
         </p>
